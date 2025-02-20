@@ -1,0 +1,42 @@
+Summary of the Code
+The code follows these main steps:
+
+1. Data Retrieval:
+   - Fetches the Consumer Price Index (CPI) and Capacity Utilisation Rate (TCU) data from the Federal Reserve Economic Data (FRED) using the `pdfetch` package.
+
+2. Data Processing:
+   - Computes the inflation rate from the CPI using logarithmic differentiation.
+   - Handles missing values in the data series.
+
+3. Visualisation:
+   - Generates line plots for both CPI and TCU, showcasing trends over time.
+   - Creates autocorrelation (ACF) and partial autocorrelation (PACF) plots for both TCU and its first differences.
+
+4. Statistical Testing:
+   - Performs several unit root tests (ADF, PP, KPSS) to assess stationarity for both the inflation rate and TCU.
+   - Conducts cointegration tests (Engle-Granger and Johansen tests) to check for long-run relationships between CPI and TCU.
+
+5. Model Estimation:
+   - Estimates a Vector Autoregression (VAR) model for the two time series.
+   - Tests for Granger causality between TCU and inflation.
+   - Uses an ARDL model to evaluate the impulse response of TCU to shocks in inflation.
+
+6. Forecasting:
+   - Employs ARIMA modeling to forecast future values of inflation.
+
+Libraries Used
+- dynamac: For dynamic modeling of economic time series.
+- forecast: For forecasting time series data.
+- tseries: For time series analysis and statistical tests.
+- zoo: For working with ordered observations.
+- ggplot2: For creating visualisations.
+- vars: For vector autoregression modeling.
+- urca: For unit root and cointegration tests.
+- dynlm: For estimating distributed lag models.
+- aTSA: For time series analysis functions.
+- readxl: For reading Excel files.
+
+Key Functions
+- `adf.test()`: Performs the Augmented Dickey-Fuller test to check for stationarity.
+- `VAR()`: Estimates a vector autoregression model for multiple time series.
+- `ca.jo()`: Conducts the Johansen cointegration test.
