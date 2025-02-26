@@ -1,6 +1,7 @@
 Econometric-Modelling-of-Cointegration-Between-Total-Consumer-Utilisation-TCU-and-Inflation
 
 📌 Overview
+
 This project performs a comprehensive time series analysis of **Inflation**, represented by the **Consumer Price Index (CPI)**, and **Capacity Utilisation**, represented by the **Total Consumer Utilization (TCU)** rate. The analysis employs various econometric techniques to investigate the dynamic relationship between these two critical economic indicators. 
 
 Objectives
